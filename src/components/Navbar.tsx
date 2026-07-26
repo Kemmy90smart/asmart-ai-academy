@@ -19,7 +19,7 @@ const Navbar = () => {
           ))}
         </nav>
 
-        <Button>Enroll Now</Button>
+        <Button className="nav-cta">Enroll Now</Button>
       </Container>
     </header>
   )
