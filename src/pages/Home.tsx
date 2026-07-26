@@ -4,6 +4,7 @@ import Container from '../components/Container'
 import CourseCard from '../components/CourseCard'
 import FeatureCard from '../components/FeatureCard'
 import TestimonialCard from '../components/TestimonialCard'
+import { pricingPlans } from '../data/pricing'
 import Hero from '../sections/Hero'
 
 const courses = [
@@ -99,33 +100,6 @@ const testimonials = [
     quote:
       'The practical lessons made complex topics feel simple and useful for real-world projects.',
     initials: 'AB',
-  },
-]
-
-const pricingPlans = [
-  {
-    name: 'Starter',
-    price: '$49',
-    subtitle: 'Perfect for beginners.',
-    features: ['Access to beginner courses', 'Community support', 'Certificate'],
-    buttonLabel: 'Get Started',
-    featured: false,
-  },
-  {
-    name: 'Professional',
-    price: '$99',
-    subtitle: 'Most Popular',
-    features: ['Everything in Starter', 'Live classes', 'AI projects', 'Career support', 'Premium certificate'],
-    buttonLabel: 'Enroll Now',
-    featured: true,
-  },
-  {
-    name: 'Enterprise',
-    price: 'Custom',
-    subtitle: 'For companies and teams.',
-    features: ['Team training', 'Dedicated support', 'Custom curriculum', 'Company certification'],
-    buttonLabel: 'Contact Us',
-    featured: false,
   },
 ]
 
