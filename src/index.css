@@ -549,6 +549,106 @@ img {
   color: #ffffff;
 }
 
+/* Features Section */
+.features-section,
+.testimonials-section {
+  padding: 2rem 0 5rem;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.feature-card,
+.testimonial-card {
+  padding: 1.4rem;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 45px rgba(15, 23, 42, 0.1);
+}
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  border-radius: 0.95rem;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.14), rgba(129, 140, 248, 0.2));
+  font-size: 1.25rem;
+}
+
+.feature-card h3,
+.testimonial-card h3 {
+  margin: 0 0 0.6rem;
+  color: #07111f;
+}
+
+.feature-card p,
+.testimonial-card p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.testimonial-card {
+  text-align: left;
+}
+
+.testimonial-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 0.9rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.testimonial-rating {
+  margin-bottom: 0.75rem;
+  color: #f59e0b;
+  letter-spacing: 0.12em;
+}
+
+.testimonial-quote {
+  margin-bottom: 0.95rem;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.testimonial-role {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
 /* Responsive */
 @media (max-width: 940px) {
   .nav-shell {
@@ -576,7 +676,9 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .courses-grid {
+  .courses-grid,
+  .features-grid,
+  .testimonials-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -608,7 +710,9 @@ img {
     margin-top: 1rem;
   }
 
-  .courses-grid {
+  .courses-grid,
+  .features-grid,
+  .testimonials-grid {
     grid-template-columns: 1fr;
   }
 }
