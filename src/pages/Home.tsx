@@ -4,127 +4,13 @@ import Container from '../components/Container'
 import CourseCard from '../components/CourseCard'
 import FeatureCard from '../components/FeatureCard'
 import TestimonialCard from '../components/TestimonialCard'
+import { courses } from '../data/courses'
+import { faqs } from '../data/faq'
+import { features } from '../data/features'
 import { pricingPlans } from '../data/pricing'
+import { siteData } from '../data/site'
+import { testimonials } from '../data/testimonials'
 import Hero from '../sections/Hero'
-
-const courses = [
-  {
-    title: 'AI Fundamentals',
-    description:
-      'Learn the foundations of Artificial Intelligence and how it is transforming industries.',
-    icon: '🤖',
-  },
-  {
-    title: 'Prompt Engineering',
-    description:
-      'Master ChatGPT and AI prompting techniques for business and productivity.',
-    icon: '✍️',
-  },
-  {
-    title: 'AI Automation',
-    description:
-      'Automate repetitive tasks using modern AI tools and workflows.',
-    icon: '⚙️',
-  },
-  {
-    title: 'Website Development',
-    description:
-      'Build modern websites using React, WordPress and AI-assisted development.',
-    icon: '💻',
-  },
-  {
-    title: 'Digital Marketing',
-    description:
-      'Learn SEO, social media marketing, email marketing and paid advertising.',
-    icon: '📈',
-  },
-  {
-    title: 'Data Analytics',
-    description:
-      'Analyze data and build dashboards for business decision making.',
-    icon: '📊',
-  },
-]
-
-const features = [
-  {
-    title: 'Expert Trainers',
-    description: 'Learn directly from experienced professionals.',
-    icon: '👩‍🏫',
-  },
-  {
-    title: 'Hands-on Projects',
-    description: 'Build real projects instead of watching endless videos.',
-    icon: '🛠️',
-  },
-  {
-    title: 'AI-Powered Learning',
-    description: 'Use modern AI tools throughout your learning journey.',
-    icon: '🧠',
-  },
-  {
-    title: 'Flexible Learning',
-    description: 'Study anytime and anywhere.',
-    icon: '⏰',
-  },
-  {
-    title: 'Career Support',
-    description: 'Receive guidance to prepare for freelance and employment opportunities.',
-    icon: '🚀',
-  },
-  {
-    title: 'Certificate of Completion',
-    description: 'Earn a professional certificate after completing your course.',
-    icon: '🏅',
-  },
-]
-
-const testimonials = [
-  {
-    name: 'Sarah Johnson',
-    role: 'Digital Marketer',
-    quote:
-      'The AI and marketing modules helped me grow my freelance business faster than I expected.',
-    initials: 'SJ',
-  },
-  {
-    name: 'Michael David',
-    role: 'Business Owner',
-    quote:
-      'I now automate daily tasks with AI tools and have more time to focus on strategy.',
-    initials: 'MD',
-  },
-  {
-    name: 'Aisha Bello',
-    role: 'University Student',
-    quote:
-      'The practical lessons made complex topics feel simple and useful for real-world projects.',
-    initials: 'AB',
-  },
-]
-
-const faqs = [
-  {
-    question: 'What experience do I need?',
-    answer: 'No prior coding or AI experience is required. Our beginner-friendly courses are designed for learners of all backgrounds.',
-  },
-  {
-    question: 'Will I receive a certificate?',
-    answer: 'Yes. Every completed course includes a certificate of completion, and premium plans include enhanced certification.',
-  },
-  {
-    question: 'Are the classes online?',
-    answer: 'Yes. All lessons are delivered online so you can learn from anywhere at a pace that fits your schedule.',
-  },
-  {
-    question: 'How long do the courses last?',
-    answer: 'Most courses are flexible and can be completed over a few weeks, depending on your learning pace and plan.',
-  },
-  {
-    question: 'Can I learn at my own pace?',
-    answer: 'Absolutely. Our learning experience is designed to support self-paced study with practical support from mentors and peers.',
-  },
-]
 
 const Home = () => {
   const [openFaq, setOpenFaq] = useState(0)
@@ -275,16 +161,16 @@ const Home = () => {
       <footer className="site-footer">
         <Container className="footer-shell">
           <div>
-            <h3>Asmart AI Academy</h3>
+            <h3>{siteData.academyName}</h3>
             <p>Practical AI and digital skills for modern careers.</p>
           </div>
 
           <div>
             <h4>Company</h4>
             <ul>
-              <li>About</li>
-              <li>Courses</li>
-              <li>Contact</li>
+              <li>{siteData.phone}</li>
+              <li>{siteData.email}</li>
+              <li>{siteData.address}</li>
             </ul>
           </div>
 
@@ -300,15 +186,15 @@ const Home = () => {
           <div>
             <h4>Follow Us</h4>
             <div className="social-links" aria-label="Social links">
-              <span>in</span>
-              <span>ig</span>
-              <span>X</span>
+              {siteData.socialLinks.map((link) => (
+                <span key={link}>{link}</span>
+              ))}
             </div>
           </div>
         </Container>
         <div className="footer-bottom">
           <Container>
-            <p>© 2026 Asmart AI Academy. All rights reserved.</p>
+            <p>© {siteData.currentYear} {siteData.academyName}. All rights reserved.</p>
           </Container>
         </div>
       </footer>
